@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Build
+dist/
+
+# Environment
+.env
+.env.local
+!.env.example
+
+# Logs
+npm-debug.log*
+
+# OS
+.DS_Store
+
+# Testing
+coverage/
+
+# TypeScript
+*.tsbuildinfo
