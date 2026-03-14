@@ -11,9 +11,8 @@ export const getDatabaseConfig = (configService: ConfigService): TypeOrmModuleOp
     entities: [__dirname + '/../**/*.entity{.ts,.js}'],
     synchronize: !isProduction,
     logging: !isProduction,
-    ssl: databaseUrl?.includes('railway') || isProduction
-      ? { rejectUnauthorized: false }
-      : false,
+    // Replace your current SSL line with this:
+    ssl: isProduction ? { rejectUnauthorized: false } : false,
     extra: isProduction ? {
       max: 20,
       idleTimeoutMillis: 30000,
